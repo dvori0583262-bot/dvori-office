@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>שירותי משרד ומיקור חוץ מתקדמים לעסקים</title>
+    <style>
+        :root {
+            --primary-color: #4a154b;
+            --secondary-color: #6b21a8;
+            --accent-color: #7e22ce;
+            --bg-light: #fcfaff;
+            --text-dark: #2d3748;
+            --text-muted: #585068;
+            --white: #ffffff;
+            --border-purple: #e9d5ff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 40px 20px 60px 20px;
+            text-align: center;
+        }
+
+        .logo-container {
+            margin-bottom: 20px;
+        }
+
+        .logo-container img {
+            max-width: 220px;
+            height: auto;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 25px auto;
+            opacity: 0.95;
+        }
+
+        .cta-btn-header {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--white);
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .cta-btn-header:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-color);
+            margin: 10px auto 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        .service-card {
+            background-color: var(--white);
+            border: 1px solid var(--border-purple);
+            border-radius: 8px;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(107, 33, 168, 0.1);
+        }
+
+        .service-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .contact-section {
+            background-color: var(--white);
+            border-radius: 8px;
+            border: 1px solid var(--border-purple);
+            padding: 40px 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: var(--text-dark);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border-purple);
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+        }
+
+        .submit-btn {
+            width: 100%;
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: none;
+            padding: 14px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .contact-details {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-purple);
+        }
+
+        .contact-details p {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .phone-link, .email-link {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--accent-color);
+            text-decoration: none;
+            display: block;
+            margin: 5px 0;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            header p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="DVORI W לוגו.jpg" alt="DVORI W - שירותי משרד ומיקור חוץ">
+        </div>
+        <h1>פתרונות ניהול ומשרד במיקור חוץ</h1>
+        <p>מעטפת אדמיניסטרטיבית מקצועית ומותאמת אישית לבעלי עסקים, עצמאיים וחברות – כדי שתוכלו להתמקד בצמיחת העסק שלכם.</p>
+        <a href="#contact" class="cta-btn-header">לשיחת ייעוץ ללא התחייבות</a>
+    </header>
+
+    <div class="container">
+        <h2 class="section-title">השירותים שלנו</h2>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>ניהול יומנים ופגישות</h3>
+                <p>תיאום פגישות, סנכרון יומנים מורכבים וניהול סדר יום יעיל ומאורגן לחיסכון בזמן יקר.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>מענה טלפוני ייצוגי</h3>
+                <p>מענה מקצועי, אדיב וייצוגי לעסק שלכם, סינון שיחות וניתוב פניות בזמן אמת.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>גבייה והנהלת חשבונות</h3>
+                <p>מעקב אחר תשלומים, הוצאת חשבוניות, טיפול בחייבים וסדר מלא בנושא הכספי.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>שירות לקוחות זמין</h3>
+                <p>מתן מענה מהיר, איכותי ומסור ללקוחות שלכם במגוון ערוצי תקשורת.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>אדמיניסטרציה כללית</h3>
+                <p>ניהול משימות שוטפות, ניהול מסמכים, מעקב ספקים ופתרונות משרדיים מותאמים אישית.</p>
+            </div>
+        </div>
+
+        <div class="contact-section" id="contact">
+            <h2 class="section-title">צרו עמנו קשר</h2>
+            
+            <!-- טופס מחובר לשירות Web3Forms לשליחה ישירה למייל -->
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="d75f8300-9e1e-44a0-b8a1-887936647232">
+
+                <div class="form-group">
+                    <label for="name">שם מלא</label>
+                    <input type="text" id="name" name="name" required placeholder="הכנס את שמך">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">טלפון</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="הכנס מספר טלפון">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">דואר אלקטרוני</label>
+                    <input type="email" id="email" name="email" placeholder="הכנס כתובת מייל">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">כיצד נוכל לסייע?</label>
+                    <textarea id="message" name="message" rows="4" placeholder="פרט בקצרה על צרכי העסק"></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">שליחת פרטים</button>
+            </form>
+
+            <div class="contact-details">
+                <p>ניתן ליצור עמנו קשר גם בדרכים הבאות:</p>
+                <a href="tel:0583262130" class="phone-link">058-3262130</a>
+                <a href="tel:086329966" class="phone-link">08-6329966</a>
+                <a href="mailto:dvori0583262@gmail.com" class="email-link">dvori0583262@gmail.com</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; כל הזכויות שמורות - שירותי משרד ומיקור חוץ</p>
+    </footer>
+
+</body>
+</html>
